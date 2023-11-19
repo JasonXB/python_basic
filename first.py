@@ -1,3 +1,8 @@
-my_dict = {'name': 'Alice', 'age': 30, 'city': 'New York'}
-for key in my_dict:
-    print(key, my_dict[key])
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+gen = my_generator()
+for item in gen:
+    print(item)
