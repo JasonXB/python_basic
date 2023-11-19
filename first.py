@@ -1,8 +1,9 @@
-def my_generator():
-    yield 1
-    yield 2
-    yield 3
-
-gen = my_generator()
-for item in gen:
-    print(item)
+phrase = "abcde"
+index = 0
+while index < len(phrase):
+    char = phrase[index]
+    if char == 'd':
+        index += 1  # must still iterate index to avoid infinite loop
+        break  # end iterations if the character is 'd'
+    print(char)
+    index += 1
