@@ -1,3 +1,3 @@
-my_tuple = (1, 2, 3, 4, 5)
-for item in my_tuple:
-    print(item)
+my_dict = {'name': 'Alice', 'age': 30, 'city': 'New York'}
+for key in my_dict:
+    print(key, my_dict[key])
