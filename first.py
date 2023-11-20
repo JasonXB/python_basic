@@ -1,13 +1,23 @@
 import random
+p1 = input("Enter player 1's name: ")
+p2 = input("Enter player 2's name: ")
 
-
+toothpicks = 13
+art = "| "
+print("We start with 13 toothpicks: ", art * 13)
 while True:
-    roll1 = random.randint(1, 6)
-    roll2 = random.randint(1, 6)
-    if roll1 == 1 and roll2 == 1:
-        print("Snake eyes!", roll1, roll2)
+    m1 = input(f"{p1}, how many will you take? ")
+
+    toothpicks -= int(m1)
+    if (toothpicks < 1):
+        print(p1, " wins!")
         break
     else:
-        print("Try again!", roll1, roll2)
-
-print("Experiment over")
+        print(art * toothpicks)
+    m2 = input(f"{p2}, how many will you take? ")
+    toothpicks -= int(m2)
+    if (toothpicks < 1):
+        print(p2, " wins!")
+        break
+    else:
+        print(art * toothpicks)
