@@ -1,9 +1,13 @@
-phrase = "abcde"
-index = 0
-while index < len(phrase):
-    char = phrase[index]
-    if char == 'd':
-        index += 1  # must still iterate index to avoid infinite loop
-        break  # end iterations if the character is 'd'
-    print(char)
-    index += 1
+import random
+
+
+while True:
+    roll1 = random.randint(1, 6)
+    roll2 = random.randint(1, 6)
+    if roll1 == 1 and roll2 == 1:
+        print("Snake eyes!", roll1, roll2)
+        break
+    else:
+        print("Try again!", roll1, roll2)
+
+print("Experiment over")
